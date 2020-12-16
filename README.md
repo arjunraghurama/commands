@@ -1,5 +1,9 @@
 # docker-commands
 
+### List all container ids
+```bash
+docker ps -aq
+```
 
 ### Stop all running containers
 ```bash
