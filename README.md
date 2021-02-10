@@ -14,3 +14,8 @@ docker stop $(docker ps -aq)
 ```bash
 docker rm $(docker ps -aq)
 ```
+
+### Docker stats to a file
+```bash
+ while true; do docker stats --no-stream >> data.txt; done
+```
