@@ -1,3 +1,38 @@
+# bash-commands
+### mount a drive
+fdisk is a command line utility to view and manage hard disks and partitions on Linux systems
+```
+fdisk -l 
+```
+
+To partition a particular hard disk, for example /dev/sdb.
+Commonly used fdisk commands.
+
+    n – Create partition
+    p – print partition table
+    d – delete a partition
+    q – exit without saving the changes
+    w – write the changes and exit.
+
+```
+fdisk /dev/sdb
+```
+Format the disk with mkfs command
+```
+mkfs.ext4 /dev/sdb
+```
+
+mount the partition
+```
+mount /dev/sdb /data
+```
+
+Make an entry in /etc/fstab file for permanent mount at boot time
+```
+/dev/sdb  /data  ext4  defaults  0  0
+```
+---
+
 # docker-commands
 
 ### List all container ids
