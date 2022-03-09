@@ -1,7 +1,7 @@
 # bash-commands
 ### mount a drive
 fdisk is a command line utility to view and manage hard disks and partitions on Linux systems
-```
+```bash
 fdisk -l 
 ```
 
@@ -14,24 +14,29 @@ Commonly used fdisk commands.
     q – exit without saving the changes
     w – write the changes and exit.
 
-```
+```bash
 fdisk /dev/sdb
 ```
 Format the disk with mkfs command
-```
+```bash
 mkfs.ext4 /dev/sdb
 ```
 
 mount the partition
-```
+```bash
 mount /dev/sdb /data
 ```
 
 Make an entry in /etc/fstab file for permanent mount at boot time
-```
+```bash
 /dev/sdb  /data  ext4  defaults  0  0
 ```
 ---
+
+### rename all files in a folder
+```bash
+ls | cat -n | while read n f; do mv "$f" "file-$n.jpg"; done
+```
 
 # docker-commands
 
