@@ -33,7 +33,7 @@ Make an entry in /etc/fstab file for permanent mount at boot time
 ```
 ---
 
-### rename all files in a folder
+### rename all files in sequential order
 ```bash
 ls | cat -n | while read n f; do mv "$f" "file-$n.<extension>"; done
 ```
